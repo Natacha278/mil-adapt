@@ -1,0 +1,33 @@
+{
+    "0": {
+        "classnames": {
+            "Tumor": [
+                "Breast tumor epithelial tissue at 20× magnification, showing densely cellular malignant epithelial proliferation arranged in irregular glands, nests, cords, or solid sheets, with disrupted architecture, variable gland formation, and infiltrative growth within fibrous or desmoplastic stroma."
+            ],
+            "Normal": [
+                "Normal breast tissue at 20× magnification, showing orderly ducts and lobules composed of regularly arranged epithelial structures with open lumina, embedded within fibrous and adipose stroma. The tissue exhibits organized glandular architecture, relatively uniform epithelial cellularity, and well-defined epithelial–stromal boundaries without dense irregular epithelial proliferation or destructive infiltration."
+
+            ]
+        },
+        "templates": [
+            "CLASSNAME.",
+            "a photomicrograph showing CLASSNAME.",
+            "a photomicrograph of CLASSNAME.",
+            "an image of CLASSNAME.",
+            "an image showing CLASSNAME.",
+            "an example of CLASSNAME.",
+            "this is CLASSNAME.",
+            "there is CLASSNAME.",
+            "a histopathological image showing CLASSNAME.",
+            "a histopathological image of CLASSNAME.",
+            "a histopathological photograph of CLASSNAME.",
+            "a histopathological photograph showing CLASSNAME.",
+            "shows CLASSNAME.",
+            "presence of CLASSNAME.",
+            "an H&E stained image of CLASSNAME.",
+            "an H&E stained image showing CLASSNAME.",
+            "an H&E image showing CLASSNAME.",
+            "an H&E image of CLASSNAME."
+        ]
+    }
+}

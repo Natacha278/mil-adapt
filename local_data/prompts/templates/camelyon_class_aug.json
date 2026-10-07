@@ -1,0 +1,26 @@
+{
+    "0": {
+        "classnames": {
+            "Tumor": [
+                "tumor tissue", 
+                "tumor epithelial tissue", 
+                "cancerous tissue", 
+                "breast tumor tissue", 
+                "breast tumor epithelial tissue", 
+                "breast cancerous tissue"
+            ],
+            "Normal": [
+                "normal tissue", 
+                "non-cancerous tissue", 
+                "normal breast tissue", 
+                "breast non-cancerous tissue", 
+                "benign breast tissue", 
+                "benign tissue"
+
+            ]
+        },
+        "templates": [
+            "CLASSNAME."
+        ]
+    }
+}

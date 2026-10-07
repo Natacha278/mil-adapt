@@ -1,0 +1,86 @@
+python generate_waffle_long_description.py \
+    --classes_id_order "Normal" "Tumor" \
+    --real_descriptions_json local_data/prompts/templates/camelyon_description.json \
+    --out_path local_data/prompts/CONCH/CAMELYON16_waffle_descr.npy
+
+python generate_waffle_prototypes.py \
+    --classes_id_order "Normal" "Tumor" \
+    --base_classnames "normal tissue" "breast cancerous tissue" \
+    --waffle_count 60 \
+    --label_before_text "presence of " \
+    --out_path local_data/prompts/CONCH/CAMELYON16_waffle_lots.npy
+
+python read_results.py \
+    --file exp_camelyon16_conch_waffle_lots.xlsx
+
+
+python add_tumor_pct_to_csv.py \
+    --xml_dir $SCRATCH/camelyon16/annotations\
+    --h5_dir /project/rrg-josedolz/natgill/data/camelyon16/trident/20x_512px_0px_overlap/features_conch_v1
+
+test_033 -> low tumor
+
+module load python/3.11 openslide cuda
+module load gcc arrow/25.0.0 opencv/4.14.0
+source ~/envs/mil-adapter/bin/activate
+
+python -c "import pandas as pd; print(pd.read_excel('experiments_camelyon16_conch.xlsx').to_string())"
+python -c "import pandas as pd; print(pd.read_excel('experiments_nsclc_conch.xlsx').to_string())"
+
+salloc --account=rrg-josedolz --gpus-per-node=1 --cpus-per-task=4 --mem=8000M --time=0-01:00
+
+python3 -c "
+import numpy as np, glob, os
+folder = '/project/rrg-josedolz/natgill/data/camelyon16_milformat/CAMELYON16/CONCH'
+bad = []
+for f in sorted(glob.glob(os.path.join(folder, '*.npy'))):
+    try:
+        np.load(f)
+    except Exception as e:
+        bad.append((os.path.basename(f), str(e)))
+print(f'{len(bad)} bad file(s)')
+for n, e in bad: print(n, '->', e)
+"
+
+for n in rorqual1 rorqual2 rorqual3; do echo $n; ssh $n tmux ls 2>&1; done
+
+tmux new -s c16          # detach with Ctrl-b d, come back with: tmux attach -t c16
+source ~/envs/awscli/bin/activate
+mkdir -p $SCRATCH/camelyon16
+aws s3 sync --no-sign-request \
+    s3://camelyon-dataset/CAMELYON16/ $SCRATCH/camelyon16/ \
+    2>&1 | tee $SCRATCH/camelyon16_download.log
+
+diskusage_report
+
+python3 -c "
+import numpy as np, glob, os
+
+folder = '/project/rrg-josedolz/natgill/data/NSCLC/CONCH'  # adjust to your actual embeddings path
+bad = []
+for f in sorted(glob.glob(os.path.join(folder, '*.npy'))):
+    try:
+        np.load(f)
+    except Exception as e:
+        bad.append((os.path.basename(f), str(e)))
+
+print(f'{len(bad)} bad file(s) out of total')
+for name, err in bad:
+    print(name, '->', err)
+"
+
+/project/rrg-josedolz/natgill/data/NSCLC/CONCH -name "*.npy" | wc -l   # should be 222
+
+
+python3 -c "
+import zipfile
+with zipfile.ZipFile('DDBB_MILAdapter.zip') as z:
+    z.extract('DDBB_MILAdapter/NSCLC/CONCH/TCGA-49-4505-01Z-00-DX1.d49d603e-1f76-43a1-a803-9f2d6a6df715.npy', path='data')
+"
+
+python3 -c "
+import numpy as np
+arr = np.load('/project/rrg-josedolz/natgill/data/NSCLC/CONCH/TCGA-49-4505-01Z-00-DX1.d49d603e-1f76-43a1-a803-9f2d6a6df715.npy')
+print('OK, shape:', arr.shape)
+"
+sacct -j 21680899 --format=JobID,JobName,State,ExitCode,Elapsed,MaxRSS,ReqMem

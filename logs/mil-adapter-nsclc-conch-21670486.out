@@ -1,0 +1,19 @@
+/home/natgill/envs/mil-adapter/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/natgill/envs/mil-adapter/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+  0%|          | 0/736 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/lustre09/project/6090488/natgill/baselines/MIL-Adapter/main.py", line 32, in <module>
+    X, Y, WSI = load_data(project=args.project, encoder=args.encoder, folder=args.folder, classes=classes)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre09/project/6090488/natgill/baselines/MIL-Adapter/utils/utils.py", line 57, in load_data
+    embeddings = [np.load(os.path.join(folder, project, encoder, f"{file_name}.npy")) for file_name in tqdm(list_WSI)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre09/project/6090488/natgill/baselines/MIL-Adapter/utils/utils.py", line 57, in <listcomp>
+    embeddings = [np.load(os.path.join(folder, project, encoder, f"{file_name}.npy")) for file_name in tqdm(list_WSI)]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/natgill/envs/mil-adapter/lib/python3.11/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/project/rrg-josedolz/natgill/data/NSCLC/CONCH/TCGA-77-A5GF-01Z-00-DX1.8E70F660-4492-4BEB-A688-217DE27C1E6D.npy'
+  0%|          | 0/736 [00:00<?, ?it/s]

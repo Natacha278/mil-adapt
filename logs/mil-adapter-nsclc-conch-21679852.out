@@ -1,0 +1,18 @@
+/home/natgill/envs/mil-adapter/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/natgill/envs/mil-adapter/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+  0%|          | 0/222 [00:00<?, ?it/s]  0%|          | 1/222 [00:00<00:27,  8.16it/s]  1%|▏         | 3/222 [00:00<00:20, 10.64it/s]  2%|▏         | 5/222 [00:00<00:16, 13.40it/s]  3%|▎         | 7/222 [00:00<00:20, 10.67it/s]  4%|▍         | 9/222 [00:00<00:20, 10.56it/s]Traceback (most recent call last):
+  File "/lustre09/project/6090488/natgill/baselines/MIL-Adapter/main.py", line 32, in <module>
+    X, Y, WSI = load_data(project=args.project, encoder=args.encoder, folder=args.folder, classes=classes)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre09/project/6090488/natgill/baselines/MIL-Adapter/utils/utils.py", line 57, in load_data
+    embeddings = [np.load(os.path.join(folder, project, encoder, f"{file_name}.npy")) for file_name in tqdm(list_WSI)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre09/project/6090488/natgill/baselines/MIL-Adapter/utils/utils.py", line 57, in <listcomp>
+    embeddings = [np.load(os.path.join(folder, project, encoder, f"{file_name}.npy")) for file_name in tqdm(list_WSI)]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/natgill/envs/mil-adapter/lib/python3.11/site-packages/numpy/lib/npyio.py", line 436, in load
+    raise EOFError("No data left in file")
+EOFError: No data left in file
+  5%|▍         | 10/222 [00:01<00:23,  9.19it/s]

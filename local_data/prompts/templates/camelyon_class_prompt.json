@@ -1,0 +1,15 @@
+{
+    "0": {
+        "classnames": {
+            "Tumor": [
+                "tumor tissue"
+            ],
+            "Normal": [
+                "normal tissue"
+            ]
+        },
+        "templates": [
+            "CLASSNAME."
+        ]
+    }
+}
