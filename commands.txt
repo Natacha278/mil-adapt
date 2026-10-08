@@ -1,3 +1,6 @@
+python conch_top_adapter.py --validate \
+        --checkpoint_path /project/rrg-josedolz/natgill/weights/conch_v1/pytorch_model.bin
+
 python generate_waffle_long_description.py \
     --classes_id_order "Normal" "Tumor" \
     --real_descriptions_json local_data/prompts/templates/camelyon_description.json \
