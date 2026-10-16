@@ -3,3 +3,4 @@ local_data/embeddings/
 .idea
 __pycache__/
 visualizations/
+old/

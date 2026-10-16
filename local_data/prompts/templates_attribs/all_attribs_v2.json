@@ -1,0 +1,14 @@
+{
+    "solid_carcinoma_nests": "Metastatic breast carcinoma forming solid nests and sheets of large malignant epithelial cells with pleomorphic nuclei.",
+    "glandular_carcinoma": "Metastatic adenocarcinoma forming irregular malignant glands lined by atypical epithelial cells.",
+    "discohesive_lobular_carcinoma": "Metastatic invasive lobular carcinoma with discohesive single-file tumor cells and occasional signet ring cells.",
+    "isolated_tumor_cells": "Isolated tumor cells: a few scattered malignant epithelial cells with large irregular nuclei.",
+    "desmoplastic_tumor_stroma": "Desmoplastic tumor stroma of reactive fibrous tissue surrounding nests of carcinoma cells."
+
+    ,"lymphocytes": "Dense sheets of small, round, uniformly dark lymphocyte nuclei with scant cytoplasm, closely packed and evenly distributed, forming the diffuse lymphoid tissue and follicles of a lymph node on H&E staining.",
+    "germinal_center": "A pale zone of a lymphoid follicle containing larger centroblasts and centrocytes with vesicular nuclei and visible nucleoli, scattered mitoses, and tingible-body macrophages with pale cytoplasm and phagocytosed debris, giving a starry-sky appearance.",
+    "sinus_histiocytes": "Lymph node sinus filled with clusters of large histiocytes with abundant pale pink or foamy cytoplasm and bland, oval, eccentric nuclei, lying loosely within open sinus spaces between lymphoid tissue.",
+    "adipose_tissue": "Perinodal fat composed of large, empty, polygonal clear spaces separated by thin pink cell membranes, with flattened peripheral nuclei and few other cells.",
+    "fibrous_stroma_vessels": "Lymph node capsule and trabeculae of dense pink collagen fibers with sparse elongated spindle nuclei, containing blood vessels lined by flat endothelial cells and filled with red blood cells.",
+    "artifact_background": "Non-diagnostic area: blank white or pale background at the tissue edge, or tissue distorted by artifacts such as darker folded double-thickness tissue, crushed or cauterized smeared dark nuclei, out-of-focus blur, air bubbles, ink, or pen marks."
+}

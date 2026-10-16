@@ -1,0 +1,9 @@
+method,group,n_slides_per_seed,detection_rate_mean,detection_rate_sd,auc_mean,auc_sd
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1)",Normal,235.0,0.7251063829787233,0.17082867291872428,,
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1)",ITC,5.8,0.34,0.12746338133066654,0.5521985815602836,0.06944662438105559
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1)",micro,86.7,0.5905554864651992,0.14122241232788751,0.7340964030516263,0.03584005084077622
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1)",macro,63.5,0.9984375,0.004941058844013092,0.9917542361598214,0.009125450746661865
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1, tail-rank 1 (M=32, margin 10))",Normal,235.0,0.7148936170212765,0.20830307611878238,,
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1, tail-rank 1 (M=32, margin 10))",ITC,5.8,0.29000000000000004,0.1892480245995049,0.5300425531914894,0.08153444069278813
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1, tail-rank 1 (M=32, margin 10))",micro,86.7,0.6033884924531889,0.1464801604812508,0.7435568243444447,0.04601782556111225
+"Text-TopK multi-concept[1T4N_tau1] (K=3, λ=0.1, tail-rank 1 (M=32, margin 10))",macro,63.5,0.9984375,0.004941058844013092,0.9915944960772087,0.011599803055678287

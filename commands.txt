@@ -1,3 +1,10 @@
+python analyze_tumor_ratio_oracle.py \
+    --text_prototypes local_data/prompts/CONCH/CAMELYON16_description.npy \
+    --xml_dir $SCRATCH/camelyon16/annotations --folder /project/rrg-josedolz/natgill/data/camelyon16_milformat \
+    --out_dir analysis/analysis_lesion_size_descr_full --exp_name descr \
+    --save_patches
+
+
 python conch_top_adapter.py --validate \
         --checkpoint_path /project/rrg-josedolz/natgill/weights/conch_v1/pytorch_model.bin
 
@@ -30,6 +37,7 @@ source ~/envs/mil-adapter/bin/activate
 python -c "import pandas as pd; print(pd.read_excel('experiments_camelyon16_conch.xlsx').to_string())"
 python -c "import pandas as pd; print(pd.read_excel('experiments_nsclc_conch.xlsx').to_string())"
 
+salloc --account=rrg-josedolz --gpus-per-node=1 --cpus-per-task=4 --mem=8000M --time=0-00:30
 salloc --account=rrg-josedolz --gpus-per-node=1 --cpus-per-task=4 --mem=8000M --time=0-01:00
 
 python3 -c "

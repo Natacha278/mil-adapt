@@ -1,0 +1,14 @@
+{
+    "classes":{
+    "lymphocytes": "Dense sheets of small, round, uniformly dark lymphocyte nuclei with scant cytoplasm, closely packed and evenly distributed, forming the diffuse lymphoid tissue and follicles of a lymph node on H&E staining.",
+   "sinus_histiocytes": "Lymph node sinus filled with clusters of large histiocytes with abundant pale pink or foamy cytoplasm and bland, oval, eccentric nuclei, lying loosely within open sinus spaces between lymphoid tissue.",
+    "adipose_tissue": "Perinodal fat composed of large, empty, polygonal clear spaces separated by thin pink cell membranes, with flattened peripheral nuclei and few other cells.",
+    "artifact_background": "Non-diagnostic area: blank white or pale background at the tissue edge, or tissue distorted by artifacts such as darker folded double-thickness tissue, crushed or cauterized smeared dark nuclei, out-of-focus blur, air bubbles, ink, or pen marks.",
+    "Tumor": 
+                "Breast tumor epithelial tissue at 20× magnification, showing densely cellular malignant epithelial proliferation arranged in irregular glands, nests, cords, or solid sheets, with disrupted architecture, variable gland formation, and infiltrative growth within fibrous or desmoplastic stroma."
+    }  ,
+    "groups":{
+        "normal": ["lymphocytes", "sinus_histiocytes","adipose_tissue","artifact_background"], 
+        "tumor": ["Tumor"]
+    }     
+}
