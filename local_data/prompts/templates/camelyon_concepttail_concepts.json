@@ -1,0 +1,80 @@
+{
+    "classes": {
+        "metastatic_carcinoma_clusters": [
+            "Metastatic breast carcinoma in a lymph node: cohesive clusters of large atypical epithelial cells with pleomorphic nuclei.",
+            "H&E, lymph node with a nest of metastatic carcinoma cells displacing lymphocytes."
+        ],
+        "isolated_tumor_cells": [
+            "A few large atypical epithelial tumor cells scattered among small lymphocytes in a lymph node.",
+            "H&E, isolated tumor cells with enlarged irregular nuclei within a lymph node sinus."
+        ],
+        "tumor_with_desmoplasia": [
+            "Metastatic carcinoma glands and cords within desmoplastic fibrous stroma in a lymph node.",
+            "H&E, infiltrating tumor cells surrounded by reactive pink collagen and activated fibroblasts."
+        ],
+        "lymphocytes": [
+            "Dense sheets of small round lymphocytes with dark nuclei in a lymph node.",
+            "H&E, benign lymphoid tissue of a lymph node."
+        ],
+        "germinal_center": [
+            "Germinal centre of a reactive lymphoid follicle with centroblasts and tingible-body macrophages.",
+            "H&E, pale follicle centre with larger lymphoid cells and a starry-sky pattern."
+        ],
+        "sinus_histiocytes": [
+            "Lymph node sinus filled with histiocytes with abundant pale foamy cytoplasm.",
+            "H&E, sinus histiocytosis in a benign lymph node."
+        ],
+        "high_endothelial_venules": [
+            "High endothelial venules with plump cuboidal endothelial cells in the paracortex of a lymph node.",
+            "H&E, small vessels lined by plump endothelium surrounded by lymphocytes."
+        ],
+        "capsule_fibrosis": [
+            "Fibrous capsule and trabeculae of a lymph node with dense pink collagen and spindle cells.",
+            "H&E, hyalinized fibrous tissue at the edge of a lymph node."
+        ],
+        "adipose_tissue": [
+            "Perinodal adipose tissue with large empty fat cells and thin membranes.",
+            "H&E, mature fat around a lymph node."
+        ],
+        "plasma_cells": [
+            "Plasma cells with eccentric clock-face nuclei and a perinuclear halo in the medullary cords of a lymph node.",
+            "H&E, sheets of benign plasma cells in a lymph node."
+        ],
+        "crush_edge_artifact": [
+            "Crushed tissue with smeared dark elongated nuclei at the cut edge of a lymph node section.",
+            "H&E, cautery and crush artifact with distorted streaming nuclei."
+        ],
+        "blood_vessels": [
+            "Blood vessels filled with red blood cells in a lymph node hilum.",
+            "H&E, congested vessels and haemorrhage in a lymph node."
+        ],
+        "background_folds": [
+            "Blank background, tissue folds and out-of-focus areas on a lymph node slide.",
+            "H&E, folded double-thickness tissue and empty glass."
+        ]
+    },
+    "groups": {
+        "tumor": [
+            "metastatic_carcinoma_clusters",
+            "isolated_tumor_cells",
+            "tumor_with_desmoplasia"
+        ],
+        "normal": [
+            "lymphocytes",
+            "germinal_center",
+            "sinus_histiocytes",
+            "high_endothelial_venules",
+            "capsule_fibrosis",
+            "adipose_tissue",
+            "plasma_cells",
+            "crush_edge_artifact",
+            "blood_vessels",
+            "background_folds"
+        ]
+    },
+    "colors": {
+        "crush_edge_artifact": "#3d8f8f",
+        "blood_vessels": "#7a7a7a",
+        "background_folds": "#c8c8c8"
+    }
+}

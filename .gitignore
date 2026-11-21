@@ -4,3 +4,5 @@ local_data/embeddings/
 __pycache__/
 visualizations/
 old/
+commands.txt
+exp_*

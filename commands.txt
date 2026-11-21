@@ -1,3 +1,11 @@
+lftp -u 'utente_reader' histoimage.na.icar.cnr.it
+du -hs "BRACS_WSI"
+du -hs "BRACS_WSI_Annotations"
+mirror --continue --parallel=4 --verbose "BRACS_WSI" BRACS_WSI
+mirror --continue --parallel=4 --verbose "BRACS_WSI_Annotations" BRACS_WSI_Annotations
+
+2073521807 /scratch/natgill/bracs/BRACS_WSI/train/Group_BT/Type_UDH/BRACS_1996.svs
+
 python analyze_tumor_ratio_oracle.py \
     --text_prototypes local_data/prompts/CONCH/CAMELYON16_description.npy \
     --xml_dir $SCRATCH/camelyon16/annotations --folder /project/rrg-josedolz/natgill/data/camelyon16_milformat \
